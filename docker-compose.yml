@@ -6,4 +6,4 @@ services:
       - 80:80
     volumes:
       - ./acg-faka:/var/www/html
-    entrypoint: /bin/bash -c "service mariadb start && exec apache2-foreground"
+    entrypoint: /bin/bash -c "service mariadb start &&chmod 777 /var/www/html&& exec apache2-foreground"
