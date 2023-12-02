@@ -1,5 +1,9 @@
+version: '3'
 services:
-    acosshop:
-        image: acosx/yiciyuan:multi
-        ports:
-            - 80:80
+  acosshop:
+    build: .
+    ports:
+      - 80:80
+    volumes:
+      - ./acg-faka:/var/www/html
+    entrypoint: /bin/bash -c "service mariadb start && exec apache2-foreground"
