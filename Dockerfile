@@ -10,5 +10,4 @@ RUN apt-get install -y libpng-dev
 RUN apt-get install -y libzip-dev
 RUN docker-php-ext-install gd pdo_mysql zip
 RUN a2enmod rewrite
-RUN service apache2 restart
 EXPOSE 80
