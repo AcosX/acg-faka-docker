@@ -1,5 +1,5 @@
-service:
+services:
     acg-faka:
-        images: acosx/yiciyuan:latest
-        port:
+        image: acosx/yiciyuan:latest
+        ports:
             - 80:80
